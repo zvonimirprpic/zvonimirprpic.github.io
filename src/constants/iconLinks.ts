@@ -1,7 +1,3 @@
-import githubIcon from "../assets/icons/githubIcon.svg";
-import linkedinIcon from "../assets/icons/linkedinIcon.svg";
-import emailIcon from "../assets/icons/emailIcon.svg";
-
 interface IIconLink {
   href: string;
   opensNewTab: boolean;

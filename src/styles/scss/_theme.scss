@@ -1,48 +1,18 @@
-@import "dark.scss";
-@import "light.scss";
-@import "breakpoints.scss";
+@use "variables/colors.scss" as *;
+@use "variables/typography.scss" as *;
+@use "variables/breakpoints.scss" as *;
 
-@font-face {
-  font-family: "Nunito";
-  src: url("../assets/fonts/Nunito-Regular.ttf");
-}
-
-:root {
-  --flare: #ffb6c1;
-}
-
-// TODO: Implement Dark/Light Theme. At the moment, only Dark theme is implemented. Below commented out CSS Rules are Dark/Light theme. ETC
-
-/* body {
-  --text-color: var(--text-color-light);
-  --button-text-color: var(--button-text-color-light):
-  --background-color: var(--background-color-light);
-  --flare-filter: var(--flare-filter-light);
-}
-
-.dark {
-  --text-color: var(--text-color-dark);
-  --button-text-color: var(--button-text-color-dark):
-  --background-color: var(--background-color-dark);
-  --flare-filter: var(--flare-filter-dark);
-}
-
-@media (prefers-color-scheme: dark) {
-  body:not(.light) {
-    --text-color: var(--text-color-dark);
-    --button-text-color: var(--button-text-color-dark):
-    --background-color: var(--background-color-dark);
-    --flare-filter: var(--flare-filter-dark);
-  }
-} */
-
+// This Body Rule-Set is currently overriding the Dark/Light theme
+//
 body {
   --text-color: var(--text-color-dark);
   --button-text-color: var(--button-text-color-dark);
   --button-background-color: var(--button-background-color-dark);
   --background-color: var(--background-color-dark);
   --flare-filter: var(--flare-filter-dark);
-} // Delete this Body CSS Rule-Set after Dark/Light theme has been implemented.
+}
+//
+// Delete this after Dark/Light theme has been implemented.
 
 body {
   font-family: "Nunito", sans-serif;

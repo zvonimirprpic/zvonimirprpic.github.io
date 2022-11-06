@@ -12,9 +12,9 @@ import { Icon } from "astro-icon";
       <Greeting />
       <div class="linksContainer">
         {
-          iconLinks.map(({ href, opensNewTab, icon }) => (
+          iconLinks.map(({ href, opensNewTab, icon, title }) => (
             <a href={href} target={opensNewTab ? "blank" : ""}>
-              <Icon name={icon} />
+              <Icon name={icon} title={title} />
             </a>
           ))
         }

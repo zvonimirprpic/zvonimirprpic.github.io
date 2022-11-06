@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Greeting from "../components/Greeting.astro";
+import { iconLinks } from "../constants/iconLinks";
+import CV from "../assets/files/zvonimir-prpic-cv.pdf";
+---
+
+<Layout title="Zvonimir Prpic - Frontend Developer - Home Page">
+  <main>
+    <section>
+      <Greeting />
+      <div class="linksContainer">
+        {
+          iconLinks.map(({ href, opensNewTab, icon, alt }) => (
+            <a href={href} target={opensNewTab ? "blank" : ""}>
+              <img src={icon} alt={alt} />
+            </a>
+          ))
+        }
+      </div>
+      <div class="buttonsContainer">
+        <a href={CV} target="_blank">View CV</a>
+        <a href={CV} download>Download CV</a>
+      </div>
+    </section>
+  </main>
+</Layout>

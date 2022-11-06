@@ -1,22 +1,23 @@
 :root {
   // Dark
+  --flare-dark: #ffb6c1;
   --text-color-dark: #fff;
   --button-background-color-dark: transparent;
   --button-text-color-dark: #fff;
+  --button-outline-color-dark: #ffb6c1;
   --background-color-dark: #081131;
   --flare-filter-dark: brightness(0) saturate(100%) invert(87%) sepia(97%)
     saturate(5839%) hue-rotate(287deg) brightness(104%) contrast(105%);
 
   // Light
-  --text-color-light: #565656;
+  --flare-light: #1d3385;
+  --text-color-light: rgb(37, 37, 37);
   --button-background-color-light: transparent;
-  --button-text-color-light: #b6fff4;
-  --background-color-light: #fff;
-  --flare-filter-light: brightness(0) saturate(100%) invert(87%) sepia(97%)
-    saturate(5839%) hue-rotate(287deg) brightness(104%) contrast(105%);
-
-  //Accent
-  --flare: #ffb6c1;
+  --button-text-color-light: rgb(37, 37, 37);
+  --button-outline-color-light: #1d3385;
+  --background-color-light: #ffd1d8;
+  --flare-filter-light: invert(9%) sepia(54%) saturate(7498%) hue-rotate(212deg)
+    brightness(101%) contrast(105%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,20 +38,4 @@
     --background-color: var(--background-color-light);
     --flare-filter: var(--flare-filter-light);
   }
-}
-
-[color-scheme="dark"] {
-  --text-color: var(--text-color-dark);
-  --button-text-color: var(--button-text-color-dark);
-  --button-background-color: var(-button-background-color-dark);
-  --background-color: var(--background-color-dark);
-  --flare-filter: var(--flare-filter-dark);
-}
-
-[color-scheme="light"] {
-  --text-color: var(--text-color-light);
-  --button-text-color: var(--button-text-color-light);
-  --button-background-color: var(-button-background-color-light);
-  --background-color: var(--background-color-light);
-  --flare-filter: var(--flare-filter-light);
 }

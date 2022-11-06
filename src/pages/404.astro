@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import brokenHeartIcon from "../assets/icons/brokenHeartIcon.svg";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="404 Page Not Found">
@@ -8,11 +8,7 @@ import brokenHeartIcon from "../assets/icons/brokenHeartIcon.svg";
     <section>
       <div class="headingContainer">
         <h1>
-          4<img
-            class="heartIcon"
-            src={brokenHeartIcon}
-            alt="Broken Heart Icon."
-          />4
+          4<Icon class="heartIcon" name="brokenHeartIcon" />4
         </h1>
         <h2>Sorry, page not found :(</h2>
       </div>

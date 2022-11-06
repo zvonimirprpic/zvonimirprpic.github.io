@@ -1,8 +1,19 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/extra">Extra</a></li>
-    </ul>
-  </nav>
-</header>
+---
+import { Icon } from "astro-icon";
+
+const { pathname } = Astro.url;
+---
+
+{
+  pathname === "/" && (
+    <header>
+      <nav>
+        <Icon id="lightswitch-on" name="lightbulbOnIcon" />
+        <Icon id="lightswitch-off" name="lightbulbOffIcon" />
+        <ul></ul>
+      </nav>
+    </header>
+  )
+}
+
+<script src="../../scripts/getCurrentTheme.js"></script>

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Greeting from "../components/Greeting/Greeting.astro";
 import { iconLinks } from "../constants/iconLinks";
 import CV from "../assets/files/zvonimir-prpic-cv.pdf";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Zvonimir Prpic - Frontend Developer - Home Page">
@@ -11,9 +12,9 @@ import CV from "../assets/files/zvonimir-prpic-cv.pdf";
       <Greeting />
       <div class="linksContainer">
         {
-          iconLinks.map(({ href, opensNewTab, icon, alt }) => (
+          iconLinks.map(({ href, opensNewTab, icon }) => (
             <a href={href} target={opensNewTab ? "blank" : ""}>
-              <img src={icon} alt={alt} />
+              <Icon name={icon} />
             </a>
           ))
         }

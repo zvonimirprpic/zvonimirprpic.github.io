@@ -2,17 +2,55 @@
 @use "variables/typography.scss" as *;
 @use "variables/breakpoints.scss" as *;
 
-// This Body Rule-Set is currently overriding the Dark/Light theme
-//
 body {
+  --flare: var(--flare-light);
+  --text-color: var(--text-color-light);
+  --button-text-color: var(--button-text-color-light);
+  --button-background-color: var(--button-background-color-light);
+  --button-outline-color: var(--button-outline-color-light);
+  --background-color: var(--background-color-light);
+  --flare-filter: var(--flare-filter-light);
+  #lightswitch-on {
+    display: inline;
+  }
+  #lightswitch-off {
+    display: none;
+  }
+}
+
+.dark {
+  --flare: var(--flare-dark);
   --text-color: var(--text-color-dark);
   --button-text-color: var(--button-text-color-dark);
   --button-background-color: var(--button-background-color-dark);
+  --button-outline-color: var(--button-outline-color-dark);
   --background-color: var(--background-color-dark);
   --flare-filter: var(--flare-filter-dark);
+  #lightswitch-on {
+    display: none;
+  }
+  #lightswitch-off {
+    display: inline;
+  }
 }
-//
-// Delete this after Dark/Light theme has been implemented.
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --flare: var(--flare-dark);
+    --text-color: var(--text-color-dark);
+    --button-text-color: var(--button-text-color-dark);
+    --button-background-color: var(--button-background-color-dark);
+    --button-outline-color: var(--button-outline-color-dark);
+    --background-color: var(--background-color-dark);
+    --flare-filter: var(--flare-filter-dark);
+    #lightswitch-on {
+      display: none;
+    }
+    #lightswitch-off {
+      display: inline;
+    }
+  }
+}
 
 body {
   font-family: "Nunito", sans-serif;
@@ -20,6 +58,13 @@ body {
   background-color: var(--background-color);
   header {
     nav {
+      svg {
+        cursor: pointer;
+      }
+      #lightswitch-off,
+      #lightswitch-on {
+        fill: var(--flare);
+      }
       ul {
         li {
           cursor: pointer;
@@ -130,18 +175,14 @@ body {
       }
       .linksContainer {
         a {
-          img {
-            color: var(--text-color);
-            cursor: pointer;
+          svg {
+            fill: var(--text-color);
           }
-        }
-        a {
           &:active,
           &:hover {
-            img {
+            svg {
               -webkit-filter: var(--flare-filter);
               filter: var(--flare-filter);
-              opacity: 0.85;
             }
           }
         }
@@ -151,15 +192,12 @@ body {
           text-decoration: none;
           font-size: 1.25rem;
           border-radius: 4px;
-          outline: 1px solid var(--flare);
+          outline: 1px solid var(--button-outline-color);
           background-color: var(--button-background-color);
           color: var(--button-text-color);
           text-align: center;
           font-weight: 400;
-          /*           -webkit-box-shadow: 2px 2px 2px 0px rgba(102, 102, 102, 1);
-          -moz-box-shadow: 2px 2px 2px 0px rgba(102, 102, 102, 1);
-          box-shadow: 2px 2px 2px 0px rgba(102, 102, 102, 1); */
-          transition: all 0.2s;
+          transition: all 0.1s;
         }
         a:focus {
           scale: 0.98;
@@ -167,7 +205,7 @@ body {
         a:hover {
           //opacity: 0.85;
           font-weight: 800;
-          outline: 2px solid var(--flare);
+          outline: 2px solid var(--button-outline-color);
         }
       }
     }
@@ -186,6 +224,9 @@ body {
   }
   #notFoundContainer {
     .headingContainer {
+      .heartIcon {
+        fill: var(--flare);
+      }
       h2 {
         font-weight: 200;
 

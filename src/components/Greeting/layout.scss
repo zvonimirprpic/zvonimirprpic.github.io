@@ -1,0 +1,17 @@
+@use "styles/variables/breakpoints" as *;
+@use "styles/variables/spacings" as *;
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .animationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: $small-gap;
+    @media only screen and (min-device-width: $tablet) {
+      gap: $medium-gap;
+    }
+  }
+}

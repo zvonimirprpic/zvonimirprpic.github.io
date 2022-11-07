@@ -1,0 +1,60 @@
+@use "styles/variables/breakpoints" as *;
+@use "styles/variables/spacings" as *;
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 100%;
+  section {
+    display: flex;
+    gap: $medium-gap;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+    @media only screen and (min-device-width: $desktop) {
+      width: auto;
+    }
+    @media only screen and (min-device-width: $tablet) {
+      gap: 0px;
+    }
+    & > * {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    article {
+      flex-direction: column;
+      margin: $medium-margin;
+      gap: $small-gap;
+    }
+    .linksContainer {
+      gap: $medium-gap;
+      align-items: center;
+      justify-content: center;
+      max-width: 200px;
+      margin: auto;
+
+      svg {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+    .buttonsContainer {
+      flex-direction: column;
+      gap: $small-gap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+      @media only screen and (min-device-width: $tablet) {
+        flex-direction: row;
+        gap: $medium-gap;
+      }
+      a {
+        width: 200px;
+        padding: $small-padding $medium-padding;
+      }
+    }
+  }
+}

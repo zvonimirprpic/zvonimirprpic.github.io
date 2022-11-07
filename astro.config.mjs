@@ -8,12 +8,14 @@ const __dirname = path.dirname(__filename);
 // https://astro.build/config
 export default defineConfig({
   site: "https://zvonimirprpic.github.io",
-  resolve: {
-    alias: [
-      {
-        find: "styles",
-        replacement: path.resolve(__dirname, "./src/styles"),
-      },
-    ],
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: "styles/variables",
+          replacement: path.resolve(__dirname, "./src/styles/variables"),
+        },
+      ],
+    },
   },
 });

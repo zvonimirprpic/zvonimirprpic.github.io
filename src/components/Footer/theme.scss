@@ -1,0 +1,13 @@
+@use "styles/variables/breakpoints" as *;
+footer {
+  p {
+    font-size: 1rem;
+    border-bottom: 1px solid var(--flare);
+  }
+  span {
+    font-size: 0.75rem;
+    .heart {
+      color: var(--flare);
+    }
+  }
+}

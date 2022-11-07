@@ -1,11 +1,11 @@
 ---
 import Header from "../components/Header/Header.astro";
 import Footer from "../components/Footer/Footer.astro";
-import "../styles/global.scss";
 export interface Props {
   title: string;
 }
 const { title = "Zvonimir Prpić - Frontend Developer" } = Astro.props as Props;
+import "./styles.scss";
 ---
 
 <!DOCTYPE html>

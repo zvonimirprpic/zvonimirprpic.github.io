@@ -1,0 +1,82 @@
+@use "styles/variables/breakpoints" as *;
+
+main {
+  section {
+    article {
+      p {
+        font-size: 1rem;
+        @media only screen and (min-device-width: $tablet) {
+          font-size: 1.25rem;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        width: auto;
+        margin: 0 auto;
+        position: relative;
+        color: var(--flare);
+        @media only screen and (min-device-width: $tablet) {
+          font-size: 1.5rem;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--flare);
+          visibility: hidden;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover:before {
+          visibility: visible;
+          width: 100%;
+          color: var(--flare);
+        }
+        &:visited {
+          color: var(--flare);
+        }
+      }
+    }
+    .linksContainer {
+      a {
+        svg {
+          fill: var(--text-color);
+        }
+        &:active,
+        &:hover {
+          svg {
+            -webkit-filter: var(--flare-filter);
+            filter: var(--flare-filter);
+          }
+        }
+      }
+    }
+    .buttonsContainer {
+      a {
+        text-decoration: none;
+        font-size: 1.25rem;
+        border-radius: 4px;
+        outline: 1px solid var(--button-outline-color);
+        background-color: var(--button-background-color);
+        color: var(--button-text-color);
+        text-align: center;
+        font-weight: 400;
+        transition: all 0.1s;
+      }
+      a:focus {
+        scale: 0.98;
+      }
+      a:hover {
+        //opacity: 0.85;
+        font-weight: 800;
+        outline: 2px solid var(--button-outline-color);
+      }
+    }
+  }
+}

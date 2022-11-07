@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 
 const { pathname } = Astro.url;
+import "./styles.scss";
 ---
 
 {
@@ -10,7 +11,7 @@ const { pathname } = Astro.url;
       <nav>
         <Icon id="lightswitch-on" name="lightbulbOnIcon" />
         <Icon id="lightswitch-off" name="lightbulbOffIcon" />
-        <ul></ul>
+        <ul />
       </nav>
     </header>
   )

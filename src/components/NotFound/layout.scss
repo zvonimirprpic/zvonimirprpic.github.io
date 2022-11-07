@@ -1,7 +1,8 @@
 @use "styles/variables/breakpoints" as *;
 @use "styles/variables/spacings" as *;
 
-#notFoundContainer {
+main {
+  flex: 1;
   max-height: 100%;
   max-width: 100%;
   display: flex;

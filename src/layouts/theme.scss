@@ -32,7 +32,7 @@ body {
   }
 }
 
-@mixin isDarkTheme() {
+@media (prefers-color-scheme: dark) {
   body:not(.light) {
     --flare: var(--flare-dark);
     --text-color: var(--text-color-dark);

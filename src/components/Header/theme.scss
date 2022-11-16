@@ -1,0 +1,35 @@
+@use "mixins" as *;
+
+header {
+  nav {
+    svg {
+      cursor: pointer;
+    }
+    #lightswitch-off,
+    #lightswitch-on {
+      fill: var(--flare);
+    }
+    ul {
+      li {
+        cursor: pointer;
+        list-style: none;
+        font-size: 1.2rem;
+        &::before {
+          content: "\2022";
+          color: var(--flare);
+          font-weight: bold;
+          display: inline-block;
+          width: 1rem;
+          margin-left: -1em;
+        }
+        &:hover {
+          font-weight: 600;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "mixins" as *;
+
+main {
+  .headingContainer {
+    .heartIcon {
+      fill: var(--flare);
+    }
+    h2 {
+      font-weight: 200;
+
+      margin-top: 32px;
+      text-align: center;
+      font-size: 2rem;
+      @include isTablet() {
+        font-size: 3.5rem;
+        margin-top: 0px;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    color: var(--flare);
+    span {
+      color: var(--text-color);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--flare);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover:before {
+      visibility: visible;
+      width: 100%;
+      color: var(--flare);
+    }
+    &:visited {
+      color: var(--flare);
+    }
+  }
+}

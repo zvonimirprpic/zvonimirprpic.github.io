@@ -49,6 +49,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ```
 zvonimirprpic.github.io
+├─ .git
 ├─ .github
 │  └─ workflows
 │     └─ deploy.yml
@@ -72,7 +73,6 @@ zvonimirprpic.github.io
 ├─ src
 │  ├─ assets
 │  │  ├─ files
-│  │  │  ├─ test.md
 │  │  │  └─ zvonimir-prpic-cv.pdf
 │  │  └─ fonts
 │  │     └─ Nunito-Regular.ttf

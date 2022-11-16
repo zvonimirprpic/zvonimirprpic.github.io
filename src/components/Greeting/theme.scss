@@ -1,0 +1,43 @@
+@use "mixins" as *;
+
+.textContainer {
+  text-align: center;
+  letter-spacing: 2px;
+  .animationContainer {
+    text-align: center;
+    h1 {
+      font-size: 1.25rem;
+      color: var(--flare);
+      @include isTablet() {
+        font-size: 2.5rem;
+      }
+      @include isDesktop() {
+        font-size: 4rem;
+      }
+    }
+    h1:first-of-type {
+      color: var(--text-color);
+    }
+    h1:last-of-type {
+      animation: type 1s infinite;
+      color: var(--text-color);
+    }
+    @keyframes type {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+  h3 {
+    font-size: 1rem;
+    @include isTablet() {
+      font-size: 1.5rem;
+    }
+    @include isDesktop() {
+      font-size: 2rem;
+    }
+    span {
+      color: var(--flare);
+    }
+  }
+}

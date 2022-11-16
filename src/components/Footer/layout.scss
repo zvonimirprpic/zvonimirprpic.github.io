@@ -1,0 +1,10 @@
+@use "mixins" as *;
+
+footer {
+  flex: 0;
+  display: flex;
+  gap: var(--small-gap);
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}

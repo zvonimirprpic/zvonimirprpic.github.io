@@ -1,0 +1,23 @@
+@use "mixins" as *;
+
+header {
+  flex: 0;
+  width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: var(--large-gap);
+    }
+  }
+}

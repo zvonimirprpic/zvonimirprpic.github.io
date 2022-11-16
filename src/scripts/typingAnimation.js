@@ -1,4 +1,4 @@
-const words = ["Zvonimir Prpić.", "A Frontend Developer."];
+const words = ["Zvonimir Prpic.", "A Frontend Developer."];
 let i = 0;
 let counter;
 const typeNow = () => {

@@ -1,3 +1,4 @@
-@use "scss/reset.scss";
-@use "scss/layout.scss";
-@use "scss/theme.scss";
+@use "./utility/reset";
+@use "./variables/typography";
+@use "./variables/spacings";
+@use "./variables/colors";

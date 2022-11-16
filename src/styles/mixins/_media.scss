@@ -1,0 +1,27 @@
+@use "../variables/breakpoints" as *;
+
+@mixin isMobile($width: $mobile) {
+  @media only screen and (min-device-width: $width) {
+    @content;
+  }
+}
+
+@mixin isTablet($width: $tablet) {
+  @media only screen and (min-device-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin isDesktop($width: $desktop) {
+  @media only screen and (min-device-width: $desktop) {
+    @content;
+  }
+}
+
+/* @mixin isDarkTheme() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+Buggy. No idea why tho.
+ */

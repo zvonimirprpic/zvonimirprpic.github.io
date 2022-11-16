@@ -1,0 +1,16 @@
+@use "mixins" as *;
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .animationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--small-gap);
+    @include isTablet() {
+      gap: var(--medium-gap);
+    }
+  }
+}

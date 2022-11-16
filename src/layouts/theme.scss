@@ -1,0 +1,57 @@
+@use "mixins" as *;
+
+body {
+  --flare: var(--flare-light);
+  --text-color: var(--text-color-light);
+  --button-text-color: var(--button-text-color-light);
+  --button-background-color: var(--button-background-color-light);
+  --button-outline-color: var(--button-outline-color-light);
+  --background-color: var(--background-color-light);
+  --flare-filter: var(--flare-filter-light);
+  #lightswitch-on {
+    display: inline;
+  }
+  #lightswitch-off {
+    display: none;
+  }
+}
+
+.dark {
+  --flare: var(--flare-dark);
+  --text-color: var(--text-color-dark);
+  --button-text-color: var(--button-text-color-dark);
+  --button-background-color: var(--button-background-color-dark);
+  --button-outline-color: var(--button-outline-color-dark);
+  --background-color: var(--background-color-dark);
+  --flare-filter: var(--flare-filter-dark);
+  #lightswitch-on {
+    display: none;
+  }
+  #lightswitch-off {
+    display: inline;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --flare: var(--flare-dark);
+    --text-color: var(--text-color-dark);
+    --button-text-color: var(--button-text-color-dark);
+    --button-background-color: var(--button-background-color-dark);
+    --button-outline-color: var(--button-outline-color-dark);
+    --background-color: var(--background-color-dark);
+    --flare-filter: var(--flare-filter-dark);
+    #lightswitch-on {
+      display: none;
+    }
+    #lightswitch-off {
+      display: inline;
+    }
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}

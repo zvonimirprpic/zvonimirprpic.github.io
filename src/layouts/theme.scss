@@ -1,4 +1,4 @@
-@use "styles/variables/breakpoints" as *;
+@use "mixins" as *;
 
 body {
   --flare: var(--flare-light);
@@ -32,7 +32,7 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@mixin isDarkTheme() {
   body:not(.light) {
     --flare: var(--flare-dark);
     --text-color: var(--text-color-dark);

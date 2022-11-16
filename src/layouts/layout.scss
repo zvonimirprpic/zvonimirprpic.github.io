@@ -1,5 +1,4 @@
-@use "styles/variables/breakpoints" as *;
-@use "styles/variables/spacings" as *;
+@use "mixins" as *;
 
 html {
   height: -webkit-fill-available;
@@ -12,8 +11,9 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   width: 100%;
-  padding: $small-padding;
-  @media only screen and (min-device-width: $tablet) {
-    padding: $medium-padding;
+  padding: var(--small-padding);
+  transition: all 400ms;
+  @include isTablet() {
+    padding: var(--medium-padding);
   }
 }

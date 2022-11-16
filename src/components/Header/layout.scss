@@ -1,5 +1,4 @@
-@use "styles/variables/breakpoints" as *;
-@use "styles/variables/spacings" as *;
+@use "mixins" as *;
 
 header {
   flex: 0;
@@ -18,7 +17,7 @@ header {
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
-      gap: $large-gap;
+      gap: var(--large-gap);
     }
   }
 }

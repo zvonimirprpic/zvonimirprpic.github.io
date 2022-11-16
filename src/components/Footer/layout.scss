@@ -1,10 +1,9 @@
-@use "styles/variables/breakpoints" as *;
-@use "styles/variables/spacings" as *;
+@use "mixins" as *;
 
 footer {
   flex: 0;
   display: flex;
-  gap: $small-gap;
+  gap: var(--small-gap);
   flex-direction: column;
   align-items: flex-end;
   width: 100%;

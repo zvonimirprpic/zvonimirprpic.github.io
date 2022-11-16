@@ -1,5 +1,4 @@
-@use "styles/variables/breakpoints" as *;
-@use "styles/variables/spacings" as *;
+@use "mixins" as *;
 
 main {
   display: flex;
@@ -9,14 +8,14 @@ main {
   min-width: 100%;
   section {
     display: flex;
-    gap: $medium-gap;
+    gap: var(--medium-gap);
     flex-direction: column;
     align-items: flex-start;
     min-width: 100%;
-    @media only screen and (min-device-width: $desktop) {
+    @include isDesktop() {
       width: auto;
     }
-    @media only screen and (min-device-width: $tablet) {
+    @include isTablet() {
       gap: 0px;
     }
     & > * {
@@ -26,11 +25,11 @@ main {
     }
     article {
       flex-direction: column;
-      margin: $medium-margin;
-      gap: $small-gap;
+      margin: var(--medium-margin);
+      gap: var(--small-gap);
     }
     .linksContainer {
-      gap: $medium-gap;
+      gap: var(--medium-gap);
       align-items: center;
       justify-content: center;
       max-width: 200px;
@@ -43,17 +42,17 @@ main {
     }
     .buttonsContainer {
       flex-direction: column;
-      gap: $small-gap;
+      gap: var(--small-gap);
       align-items: center;
       justify-content: center;
       margin-top: 16px;
-      @media only screen and (min-device-width: $tablet) {
+      @include isTablet() {
         flex-direction: row;
-        gap: $medium-gap;
+        gap: var(--medium-gap);
       }
       a {
         width: 200px;
-        padding: $small-padding $medium-padding;
+        padding: var(--small-padding) var(--medium-padding);
       }
     }
   }

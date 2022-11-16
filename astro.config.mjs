@@ -12,8 +12,11 @@ export default defineConfig({
     resolve: {
       alias: [
         {
-          find: "styles/variables",
-          replacement: path.resolve(__dirname, "./src/styles/variables"),
+          find: "mixins",
+          replacement: path.resolve(
+            __dirname,
+            "./src/styles/mixins/media.scss"
+          ),
         },
       ],
     },

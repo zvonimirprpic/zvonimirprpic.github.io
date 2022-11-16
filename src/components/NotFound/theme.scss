@@ -1,4 +1,4 @@
-@use "styles/variables/breakpoints" as *;
+@use "mixins" as *;
 
 main {
   .headingContainer {
@@ -11,7 +11,7 @@ main {
       margin-top: 32px;
       text-align: center;
       font-size: 2rem;
-      @media only screen and (min-device-width: $tablet) {
+      @include isTablet() {
         font-size: 3.5rem;
         margin-top: 0px;
       }

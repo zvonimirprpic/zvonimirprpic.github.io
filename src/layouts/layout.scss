@@ -1,14 +1,16 @@
 @use "mixins" as *;
 
 html {
-  height: -webkit-fill-available;
+  overflow: hidden;
+  height: 100%;
 }
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: -webkit-fill-available;
+  overflow: hidden;
+  height: 100%;
   width: 100%;
   padding: var(--small-padding);
   transition: all 400ms;

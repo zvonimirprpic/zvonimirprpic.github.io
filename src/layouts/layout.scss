@@ -13,6 +13,7 @@ body {
   min-height: fill-available;
   min-height: -moz-available;
   min-height: -webkit-fill-available;
+  overflow: hidden;
   width: 100%;
   padding: var(--small-padding);
   transition: all 400ms;

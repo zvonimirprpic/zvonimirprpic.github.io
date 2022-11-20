@@ -1,10 +1,17 @@
 @use "mixins" as *;
 
 footer {
-  flex: 0;
-  display: flex;
-  gap: var(--small-gap);
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
+  position: fixed;
+  right: calc(0% + var(--small-padding));
+  bottom: calc(0% + var(--small-padding));
+  @include isTablet() {
+    right: calc(0% + var(--medium-padding));
+    bottom: calc(0% + var(--medium-padding));
+    flex: 0;
+    display: flex;
+    gap: var(--small-gap);
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
 }

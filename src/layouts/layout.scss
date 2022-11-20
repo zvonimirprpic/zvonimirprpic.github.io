@@ -11,6 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   min-height: fill-available;
+  min-height: -moz-available;
   min-height: -webkit-fill-available;
   width: 100%;
   padding: var(--small-padding);
